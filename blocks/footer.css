@@ -1,0 +1,19 @@
+.footer{
+    width: 318px;
+    background-color: black;
+}
+
+.footer__text{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: left;
+    color: #fff;
+}
+
+@media screen and (max-width: 320px) {
+    .footer{
+        width: 90%;
+    }
+}

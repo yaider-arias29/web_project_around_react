@@ -60,7 +60,7 @@ function Main() {
   const [popup, setPopup] = useState(null);
   const editProfilePopup = { title: "Editar perfil", children: <EditProfile /> };
   const newCardPopup = { title: "Nuevo lugar", children: <NewCard /> };
-  const editAvatar = { title: "Editar avatar", children: <EditAvatar />};
+  const editAvatar = { title: "Editar avatar", children: <EditAvatar onClose={handleClosePopup}/>};
 
   function handleOpenPopup(popup) {
     setPopup(popup);

@@ -1,7 +1,8 @@
 .profile {
   display: flex;
-  padding-top: 30px;
+  padding-left: 350px;
   margin: auto;
+
 }
 
 .profile__image {

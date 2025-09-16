@@ -1,3 +1,5 @@
+import Popup from './Popup.jsx';
+
 export default function EditProfile() {
   return (
     <form
@@ -6,6 +8,7 @@ export default function EditProfile() {
       id="edit-profile-form"
       noValidate
     >
+      <h3 className="popup__title">Cambiar perfil</h3>
       <label className="popup__field">
         <input
           className="popup__input popup__input_type_name"

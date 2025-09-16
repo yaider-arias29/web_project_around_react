@@ -6,6 +6,7 @@ export default function NewCard() {
       id="new-card-form"
       noValidate
     >
+    <h3 className="popup__title">Nueva carta</h3>  
       <label className="popup__field">
         <input
           className="popup__input popup__input_type_card-name"

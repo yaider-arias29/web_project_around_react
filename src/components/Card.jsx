@@ -1,8 +1,12 @@
- export default function Card({ card, onCardClick }) {
+import trashIcon from '../images/trash-icon-remove.svg';
+import likeIcon from '../images/Vector.svg';
+
+export default function Card({ card, onCardClick }) {
     
   
     return (
     <li className="elements__cards">
+      <img src={trashIcon} className="elements__remove" alt="trash-icon" />
       <img
         src={card.link}
         className="elements__image"
@@ -16,6 +20,7 @@
     
       <div className="elements__description">
         <h2 className="elements__title">{card.name}</h2>
+        <img src={likeIcon} classname="elements__icon" alt="elements-icon" />
       </div>
     </li>
   );

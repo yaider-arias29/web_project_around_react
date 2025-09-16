@@ -1,5 +1,4 @@
 export default function Popup({ isOpened, onClose, title, children }) {
-console.log(isOpened)
   return (
     <div className={`popup ${isOpened ? 'popup_opened' : ''}`}>
       <div className={`popup__content ${!title ? ".popup__content_content_image" : ""}`}>

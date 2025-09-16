@@ -1,5 +1,4 @@
-
-import Popup from '../../../../../Content/Popup/popup.jsx'; 
+import Popup from './Popup.jsx'; 
 
 export default function ImagePopup({ card, onClose }) {
   return (

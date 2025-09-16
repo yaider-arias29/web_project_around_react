@@ -3,11 +3,12 @@ import profileImage from '../images/Avatar.png';
 import editIcon from '../images/Edit-Button.png';
 import addIcon from '../images/Add-Button.png';
 import trashIcon from '../images/trash-icon-remove.svg';
-import ImagePopup from '../src/components/Form/NewCard/ImagePopup/ImagePopup.jsx';
-import NewCard from '../src/components/Form/NewCard/NewCard.jsx';
-import Card from './Components/card.jsx';
-import Popup from './Popup/popup';
-import EditProfile from '../src/components/Form/EditProfile/EditProfile.jsx' 
+import ImagePopup from './ImagePopup.jsx';
+import Card from './Card.jsx';
+import NewCard from './NewCard.jsx';
+import Popup from './Popup.jsx';
+import EditProfile from './EditProfile.jsx';
+import EditAvatar from './EditAvatar.jsx'
 import { useState } from "react"; 
 const cards = [
   {
@@ -26,6 +27,30 @@ const cards = [
     owner: '5d1f0611d321eb4bdcd707dd',
     createdAt: '2019-07-05T08:11:58.324Z',
   },
+    {
+      isLiked: false,
+      _id: '5d1f064ed321eb4bdcd707df',
+      name: "Montañas Calvas",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg"
+    },
+    {
+      isLiked: false,
+      _id: '5d1f064ed321eb4bdcd707dg',
+      name: "Latemar",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg"
+    },
+    {
+      isLiked: false,
+      _id: '5d1f064ed321eb4bdcd707dh',
+      name: "Parque Nacional de la Vanoise",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg"
+    },
+    {
+      isLiked: false,
+      _id: '5d1f064ed321eb4bdcd707di',
+      name: "Lago di Braies",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg"
+    },
 ];
 
 console.log(cards);
@@ -35,6 +60,7 @@ function Main() {
   const [popup, setPopup] = useState(null);
   const editProfilePopup = { title: "Editar perfil", children: <EditProfile /> };
   const newCardPopup = { title: "Nuevo lugar", children: <NewCard /> };
+  const editAvatar = { title: "Editar avatar", children: <EditAvatar />};
 
   function handleOpenPopup(popup) {
     setPopup(popup);
@@ -56,7 +82,8 @@ function Main() {
       <div className="profile">
         <div className="profile__image-container">
           <img className="profile__image" src={profileImage} alt="image-profile" />
-          <div className="profile__image-overlay"></div> 
+          <div className="profile__image-overlay"
+          onClick={() => handleOpenPopup(editAvatar)}></div> 
         </div>
         <div className="profile__info">
           <p className="profile__name">Jacques Cousteau</p>

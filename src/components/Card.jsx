@@ -8,7 +8,6 @@
         className="elements__image"
         alt={card.name}
         onClick={() => {
-            console.log('¡Se hizo clic en la imagen!');
             onCardClick(card)
 
         }}

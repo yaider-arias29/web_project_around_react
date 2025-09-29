@@ -62,6 +62,11 @@ function Main() {
   const newCardPopup = { title: "Nuevo lugar", children: <NewCard /> };
   const editAvatar = { title: "Editar avatar", children: <EditAvatar onClose={handleClosePopup}/>};
 
+// Función que elimina la tarjeta
+function handleCardDelete(cardToDelete) {
+setCards((state) => state.filter((c) => c._id !== cardToDelete._id));
+}
+
   function handleOpenPopup(popup) {
     setPopup(popup);
   }

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import Header from './components/header.jsx';
-import Main from './components/content.jsx';
-import Footer from './components/footer.jsx';
-import api from './utils/api.js';
-import { CurrentUserContext } from './contexts/CurrentUserContext.js';
-import './index.css';
+import Header from './header.jsx';
+import Main from './content.jsx';
+import Footer from './footer.jsx';
+import api from '../utils/api.js';
+import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
+import '../index.css';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
